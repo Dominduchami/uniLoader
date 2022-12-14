@@ -28,6 +28,14 @@ menu "Device Support"
 		help
 		  Say Y if you want to include support for Samsung Galaxy S9
 
+	config LG_BULLHEAD
+		bool "Support for LG Nexus 5X"
+		default n
+		depends on QCOM_MSM8994
+		help
+		  Say Y if you want to include support for LG Nexus 5X
+
+
 endmenu
 
 menu "Device Specific Addresses"
@@ -38,6 +46,7 @@ menu "Device Specific Addresses"
 		default 0x090000000 if SAMSUNG_JACKPOTLTE
 		default 0x090000000 if SAMSUNG_DREAMLTE
 		default 0x090000000 if SAMSUNG_STARLTE
+		default 0x000008000 if LG_BULLHEAD
 
 	config FRAMEBUFFER_BASE
 		hex "Framebuffer Base Address (for SimpleFB)"
@@ -46,6 +55,7 @@ menu "Device Specific Addresses"
 		default 0x0ec000000 if SAMSUNG_JACKPOTLTE
 		default 0x0cc000000 if SAMSUNG_DREAMLTE
 		default 0x0cc000000 if SAMSUNG_STARLTE
+		default 0x000008000 if LG_BULLHEAD
 
 	config FRAMEBUFFER_WIDTH
 		int "Framebuffer Width (for SimpleFB)"
@@ -54,6 +64,7 @@ menu "Device Specific Addresses"
 		default 1080 if SAMSUNG_JACKPOTLTE
 		default 1440 if SAMSUNG_DREAMLTE
 		default 1440 if SAMSUNG_STARLTE
+		default 1080 if LG_BULLHEAD
 
 	config FRAMEBUFFER_HEIGHT
 		int "Framebuffer Height (for SimpleFB)"
@@ -62,6 +73,7 @@ menu "Device Specific Addresses"
 		default 2220 if SAMSUNG_JACKPOTLTE
 		default 2960 if SAMSUNG_DREAMLTE
 		default 2960 if SAMSUNG_STARLTE
+		default 1920 if LG_BULLHEAD
 
 	config FRAMEBUFFER_STRIDE
 		int "Framebuffer Stride (for SimpleFB)"
@@ -70,5 +82,6 @@ menu "Device Specific Addresses"
 		default 4 if SAMSUNG_JACKPOTLTE
 		default 4 if SAMSUNG_DREAMLTE
 		default 4 if SAMSUNG_STARLTE
+		default 3 if LG_BULLHEAD
 
 endmenu
