@@ -75,4 +75,11 @@ config QUALCOMM
 		select QUALCOMM
 		help
 		  Say Y if your device uses this Qualcomm SoC
+
+	config QC32_8250
+		bool "Support for QUALCOMM QSD8250"
+		default n
+		select QUALCOMM
+		help
+		  Say Y if your device uses this Qualcomm SoC
  endchoice
