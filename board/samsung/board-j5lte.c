@@ -10,7 +10,7 @@
 
 #define PIPE_SSPP_SRC_FORMAT                    0x30
 #define PIPE_SSPP_SRC_UNPACK_PATTERN            0x34
-#define PIPE_BASE				0x1A15000
+#define PIPE_BASE				0x01A15000
 #define PIPE_SSPP_SRC_YSTRIDE			0x24
 
 #define MDP_CTL_0_BASE                          0x1A02000

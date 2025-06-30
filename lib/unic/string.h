@@ -83,6 +83,12 @@ void *memmove (void *, const void *, size_t);
 #endif
 
 #ifdef __arm__
+void *memcpy (void *s1, const void *s2, size_t n);
+void *memmove (void *s1, const void *s2, size_t n);
+#endif
+
+/*
+#ifdef __arm__
 void *memcpy (void *s1, const void *s2, size_t n)
 {
 	char *dest = (char *)s1;
@@ -115,7 +121,7 @@ void *memmove (void *s1, const void *s2, size_t n)
 
 	return s1;
 }
-#endif
+#endif*/
 
 static inline int tolower (int c)
 {
