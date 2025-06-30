@@ -16,7 +16,9 @@ void acpm_ipc_send_data_async(void *reg_base, unsigned int ipc_ch, unsigned int 
 
 	writel(cmd0, reg_base + SR0);
 	writel(cmd1, reg_base + SR1);
-	__asm__ volatile ("dsb	sy");
+#ifdef __aarch64__
+	__asm__ volatile ("dsb  sy");
+#endif
 	writel(acpm_ipc, reg_base + INTGR0);
 }
 
